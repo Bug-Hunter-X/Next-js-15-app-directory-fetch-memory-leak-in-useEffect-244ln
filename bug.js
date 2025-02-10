@@ -1,0 +1,1 @@
+In Next.js 15, a subtle issue can occur when using the `app` directory's `fetch` API within a component's `useEffect` hook. If the component unmounts before the `fetch` promise resolves, it may lead to memory leaks or unexpected behavior. This is because the component may no longer exist to handle the resolved data, yet the `fetch` request continues in the background.
